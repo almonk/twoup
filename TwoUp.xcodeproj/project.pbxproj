@@ -18,6 +18,7 @@
 		2EE7DBB1185B5B7500A85A94 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EE7DB90185B5B7500A85A94 /* Cocoa.framework */; };
 		2EE7DBB9185B5B7500A85A94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EE7DBB7185B5B7500A85A94 /* InfoPlist.strings */; };
 		2EE7DBBB185B5B7500A85A94 /* TwoUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE7DBBA185B5B7500A85A94 /* TwoUpTests.m */; };
+		2EE7DBC5185B60BD00A85A94 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EE7DBC4185B60BD00A85A94 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		2EE7DBB6185B5B7500A85A94 /* TwoUpTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TwoUpTests-Info.plist"; sourceTree = "<group>"; };
 		2EE7DBB8185B5B7500A85A94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2EE7DBBA185B5B7500A85A94 /* TwoUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoUpTests.m; sourceTree = "<group>"; };
+		2EE7DBC4185B60BD00A85A94 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EE7DBC5185B60BD00A85A94 /* WebKit.framework in Frameworks */,
 				2EE7DB91185B5B7500A85A94 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +98,7 @@
 		2EE7DB8F185B5B7500A85A94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2EE7DBC4185B60BD00A85A94 /* WebKit.framework */,
 				2EE7DB90185B5B7500A85A94 /* Cocoa.framework */,
 				2EE7DBAF185B5B7500A85A94 /* XCTest.framework */,
 				2EE7DB92185B5B7500A85A94 /* Other Frameworks */,

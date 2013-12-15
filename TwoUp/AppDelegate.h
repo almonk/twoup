@@ -7,9 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <WebKit/WebKit.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+@property (assign) IBOutlet WebView *mobileView;
+@property (assign) IBOutlet WebView *tabletView;
+@property (assign) IBOutlet NSTextField *addressUrl;
+
 @property (assign) IBOutlet NSWindow *window;
+
+-(IBAction)sendTextToUrl:(id)sender;
 
 @end

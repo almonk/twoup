@@ -3,6 +3,8 @@ twoup
 
 A "two-up" web browser to test responsive designs – an open source clone of [Duo](http://helloduo.com/).
 
+[Download the .app](https://github.com/almonk/twoup/releases/tag/0.1)
+
 ### Features
 
 * Panes stay (generally) in sync as you browse the web

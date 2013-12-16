@@ -43,6 +43,11 @@
 
 -(IBAction)sendTextToUrl:(id)sender {
     NSString *urlAddress = [_addressUrl stringValue];
+
+    if (![urlAddress hasPrefix:@"http"]) {
+        urlAddress = [@"http://" stringByAppendingString:urlAddress];
+    }
+
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [[self.mobileView mainFrame] loadRequest:requestObj];

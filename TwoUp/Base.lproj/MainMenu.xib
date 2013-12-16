@@ -749,8 +749,59 @@
                             <action selector="sendTextToUrl:" target="494" id="Fr8-VY-UMD"/>
                         </connections>
                     </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="5125EE4F-4D89-4EEF-AE89-003451477A30" label="Back button" paletteLabel="Back button" id="N1k-pA-yqQ">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="30" height="28"/>
+                        <size key="maxSize" width="50" height="48"/>
+                        <button key="view" verticalHuggingPriority="750" id="rpZ-VC-MXd">
+                            <rect key="frame" x="11" y="14" width="50" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" title="←" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YVH-vO-eoO">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="navigateBack:" target="494" id="Hir-Vw-NMX"/>
+                            </connections>
+                        </button>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="DB683B98-222F-407A-8D29-CBD2CF56C4B3" label="Forward button" paletteLabel="Forward button" id="IOr-xO-jnV">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="30" height="28"/>
+                        <size key="maxSize" width="50" height="48"/>
+                        <button key="view" verticalHuggingPriority="750" id="jd2-eL-vSC">
+                            <rect key="frame" x="20" y="14" width="50" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" title="→" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uyQ-3Z-Imf">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="navigateForward:" target="494" id="zY4-xc-RJl"/>
+                            </connections>
+                        </button>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="1EF30407-1161-434C-B9AA-C94D273F29CF" label="Reload button" paletteLabel="Reload button" id="2Hq-qE-7eN">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="40" height="28"/>
+                        <size key="maxSize" width="50" height="48"/>
+                        <button key="view" verticalHuggingPriority="750" id="TkM-Jg-AE5">
+                            <rect key="frame" x="17" y="14" width="50" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" title="Reload" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dbC-NA-AGr">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="navigateReload:" target="494" id="pSJ-Kn-hP5"/>
+                            </connections>
+                        </button>
+                    </toolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
+                    <toolbarItem reference="N1k-pA-yqQ"/>
+                    <toolbarItem reference="IOr-xO-jnV"/>
+                    <toolbarItem reference="2Hq-qE-7eN"/>
                     <toolbarItem reference="IJL-L1-BaI"/>
                     <toolbarItem reference="mgG-Wt-u6e"/>
                 </defaultToolbarItems>

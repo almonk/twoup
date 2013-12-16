@@ -25,6 +25,8 @@
     [self.tabletView setFrameLoadDelegate:self];
     
     [_addressUrl setStringValue:@"http://www.theguardian.com/preference/platform/mobile?page=http%3A%2F%2Fwww.theguardian.com%3Fview%3Dmobile"];
+    
+    [self updateDimensionFields];
 }
 
 - (void)webView:(WebView *)webView decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(WebFrame *)frame decisionListener:(id )listener{
@@ -84,7 +86,24 @@
     }
     
     return urlAddress;
+}
 
+-(void)windowDidResize:(NSNotification *)notification {
+    [self updateDimensionFields];
+}
+
+-(void) updateDimensionFields {
+    NSSize tabletViewSize = [self.tabletView frame].size;
+    NSMutableString *tabletDimensionString = [NSMutableString stringWithFormat: @"%ld", lroundf(tabletViewSize.width)];
+    [tabletDimensionString appendString:@"x"];
+    [tabletDimensionString appendString:[NSMutableString stringWithFormat: @"%ld", lroundf(tabletViewSize.height)]];
+    [_tabletDimensions setStringValue:tabletDimensionString];
+    
+    NSSize mobileViewSize = [self.mobileView frame].size;
+    NSMutableString *mobileDimensionString = [NSMutableString stringWithFormat: @"%ld", lroundf(mobileViewSize.width)];
+    [mobileDimensionString appendString:@"x"];
+    [mobileDimensionString appendString:[NSMutableString stringWithFormat: @"%ld", lroundf(mobileViewSize.height)]];
+    [_mobileDimensions setStringValue:mobileDimensionString];
 }
 
 @end

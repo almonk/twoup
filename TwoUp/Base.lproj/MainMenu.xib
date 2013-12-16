@@ -652,7 +652,7 @@
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="1051" height="779"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="1051" height="779"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -670,11 +670,22 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <webPreferences key="preferences" identifier="mobileView" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0"/>
                                     </webView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SAT-Yf-a68">
+                                        <rect key="frame" x="251" y="5" width="100" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="border" alignment="center" drawsBackground="YES" id="rZH-it-I2s">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="0lw-nO-m9s" firstAttribute="leading" secondItem="0gh-a6-Qzi" secondAttribute="leading" id="0Y5-TC-O2X"/>
                                     <constraint firstItem="0lw-nO-m9s" firstAttribute="top" secondItem="0gh-a6-Qzi" secondAttribute="top" id="5RL-Xn-WgC"/>
+                                    <constraint firstAttribute="trailing" secondItem="SAT-Yf-a68" secondAttribute="trailing" constant="10" id="WqE-E8-mkl"/>
                                     <constraint firstAttribute="trailing" secondItem="0lw-nO-m9s" secondAttribute="trailing" id="d1w-4t-V3u"/>
+                                    <constraint firstAttribute="bottom" secondItem="SAT-Yf-a68" secondAttribute="bottom" constant="5" id="qOu-0T-dOU"/>
                                     <constraint firstAttribute="bottom" secondItem="0lw-nO-m9s" secondAttribute="bottom" id="yGJ-Zr-Pyi"/>
                                 </constraints>
                             </customView>
@@ -687,11 +698,22 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <webPreferences key="preferences" identifier="tabletView" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0"/>
                                     </webView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="43a-1t-bxk">
+                                        <rect key="frame" x="576" y="20" width="100" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="border" alignment="center" drawsBackground="YES" id="86H-xG-EmV">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" red="0.73581861413043481" green="0.73581861413043481" blue="0.73581861413043481" alpha="1" colorSpace="calibratedRGB"/>
+                                        </textFieldCell>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="7Uf-9d-Z8z" secondAttribute="trailing" id="L9A-bh-7jE"/>
                                     <constraint firstAttribute="bottom" secondItem="7Uf-9d-Z8z" secondAttribute="bottom" id="MS6-Ov-45e"/>
+                                    <constraint firstAttribute="trailing" secondItem="43a-1t-bxk" secondAttribute="trailing" constant="20" id="Wta-GM-WPL"/>
                                     <constraint firstItem="7Uf-9d-Z8z" firstAttribute="top" secondItem="dVQ-cQ-YLT" secondAttribute="top" id="eH6-3b-eWN"/>
+                                    <constraint firstAttribute="bottom" secondItem="43a-1t-bxk" secondAttribute="bottom" constant="10" id="spK-Ys-mjg"/>
                                     <constraint firstItem="7Uf-9d-Z8z" firstAttribute="leading" secondItem="dVQ-cQ-YLT" secondAttribute="leading" id="wG9-iG-Zme"/>
                                 </constraints>
                             </customView>
@@ -806,11 +828,16 @@
                     <toolbarItem reference="mgG-Wt-u6e"/>
                 </defaultToolbarItems>
             </toolbar>
+            <connections>
+                <outlet property="delegate" destination="494" id="xIV-8P-3eR"/>
+            </connections>
         </window>
         <customObject id="494" customClass="AppDelegate">
             <connections>
                 <outlet property="addressUrl" destination="4ui-jA-Ac1" id="X4J-qx-hd6"/>
+                <outlet property="mobileDimensions" destination="SAT-Yf-a68" id="NM9-6I-sni"/>
                 <outlet property="mobileView" destination="0lw-nO-m9s" id="X01-c9-YXx"/>
+                <outlet property="tabletDimensions" destination="43a-1t-bxk" id="EPh-V0-o0I"/>
                 <outlet property="tabletView" destination="7Uf-9d-Z8z" id="Dta-n3-iZb"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>

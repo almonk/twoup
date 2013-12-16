@@ -22,4 +22,6 @@
 -(IBAction)navigateForward:(id)sender;
 -(IBAction)navigateReload:(id)sender;
 
+-(NSString*)buildUrlFromAddressBar;
+
 @end

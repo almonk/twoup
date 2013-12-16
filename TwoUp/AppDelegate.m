@@ -49,5 +49,21 @@
     [[self.tabletView mainFrame] loadRequest:requestObj];
 }
 
+-(IBAction)navigateBack:(id)sender {
+    [self.mobileView goBack];
+    [self.tabletView goBack];
+}
+
+
+-(IBAction)navigateForward:(id)sender {
+    [self.mobileView goForward];
+    [self.tabletView goForward];
+}
+
+
+-(IBAction)navigateReload:(id)sender {
+    [self.mobileView reload:nil];
+    [self.tabletView reload:nil];
+}
 
 @end

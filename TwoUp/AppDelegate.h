@@ -18,5 +18,8 @@
 @property (assign) IBOutlet NSWindow *window;
 
 -(IBAction)sendTextToUrl:(id)sender;
+-(IBAction)navigateBack:(id)sender;
+-(IBAction)navigateForward:(id)sender;
+-(IBAction)navigateReload:(id)sender;
 
 @end

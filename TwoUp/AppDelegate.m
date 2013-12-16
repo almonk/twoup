@@ -42,8 +42,7 @@
 }
 
 -(IBAction)sendTextToUrl:(id)sender {
-    NSString *urlAddress = [_addressUrl stringValue];
-    NSURL *url = [NSURL URLWithString:urlAddress];
+    NSURL *url = [NSURL URLWithString:[self buildUrlFromAddressBar]];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [[self.mobileView mainFrame] loadRequest:requestObj];
     [[self.tabletView mainFrame] loadRequest:requestObj];
@@ -64,6 +63,28 @@
 -(IBAction)navigateReload:(id)sender {
     [self.mobileView reload:nil];
     [self.tabletView reload:nil];
+}
+
+-(NSString*)buildUrlFromAddressBar {
+    NSString *urlAddress = [_addressUrl stringValue];
+    
+    NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"^https?://"
+                                                      options:NSRegularExpressionCaseInsensitive
+                                                      error:&error];
+    
+    if (!error) {
+        NSTextCheckingResult *match = [regex firstMatchInString:urlAddress
+                                             options:0
+                                             range:NSMakeRange(0, [urlAddress length])];
+        
+        if (!match) {
+            urlAddress = [@"http://" stringByAppendingString:urlAddress];
+        }
+    }
+    
+    return urlAddress;
+
 }
 
 @end

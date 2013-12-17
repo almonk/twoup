@@ -27,6 +27,14 @@
     [_addressUrl setStringValue:@"http://www.theguardian.com/preference/platform/mobile?page=http%3A%2F%2Fwww.theguardian.com%3Fview%3Dmobile"];
     
     [self updateDimensionFields];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewResized:)
+                                          name:NSViewFrameDidChangeNotification object:_mobileView];
+}
+
+- (void)viewResized:(NSNotification *)notification
+{
+    [self updateDimensionFields];
 }
 
 - (void)webView:(WebView *)webView decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(WebFrame *)frame decisionListener:(id )listener{
@@ -88,10 +96,6 @@
     return urlAddress;
 }
 
--(void)windowDidResize:(NSNotification *)notification {
-    [self updateDimensionFields];
-}
-
 -(void) updateDimensionFields {
     NSSize tabletViewSize = [self.tabletView frame].size;
     NSMutableString *tabletDimensionString = [NSMutableString stringWithFormat: @"%ld", lroundf(tabletViewSize.width)];
@@ -104,6 +108,12 @@
     [mobileDimensionString appendString:@"x"];
     [mobileDimensionString appendString:[NSMutableString stringWithFormat: @"%ld", lroundf(mobileViewSize.height)]];
     [_mobileDimensions setStringValue:mobileDimensionString];
+}
+
+- (void)mouseDragged:(NSEvent *)event
+{
+    NSLog(@"DRAGGED");
+    [self updateDimensionFields];
 }
 
 @end

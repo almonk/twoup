@@ -652,7 +652,7 @@
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="1051" height="779"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="1051" height="779"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -665,56 +665,55 @@
                                 <rect key="frame" x="0.0" y="0.0" width="354" height="779"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
-                                    <webView translatesAutoresizingMaskIntoConstraints="NO" id="0lw-nO-m9s">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="779"/>
+                                    <webView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0lw-nO-m9s">
+                                        <rect key="frame" x="0.0" y="28" width="354" height="751"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <webPreferences key="preferences" identifier="mobileView" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0"/>
                                     </webView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SAT-Yf-a68">
-                                        <rect key="frame" x="251" y="5" width="100" height="21"/>
+                                        <rect key="frame" x="0.0" y="5" width="351" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="border" alignment="center" drawsBackground="YES" id="rZH-it-I2s">
-                                            <font key="font" metaFont="system"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" drawsBackground="YES" id="rZH-it-I2s">
+                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="0lw-nO-m9s" firstAttribute="leading" secondItem="0gh-a6-Qzi" secondAttribute="leading" id="0Y5-TC-O2X"/>
-                                    <constraint firstItem="0lw-nO-m9s" firstAttribute="top" secondItem="0gh-a6-Qzi" secondAttribute="top" id="5RL-Xn-WgC"/>
-                                    <constraint firstAttribute="trailing" secondItem="SAT-Yf-a68" secondAttribute="trailing" constant="10" id="WqE-E8-mkl"/>
-                                    <constraint firstAttribute="trailing" secondItem="0lw-nO-m9s" secondAttribute="trailing" id="d1w-4t-V3u"/>
-                                    <constraint firstAttribute="bottom" secondItem="SAT-Yf-a68" secondAttribute="bottom" constant="5" id="qOu-0T-dOU"/>
-                                    <constraint firstAttribute="bottom" secondItem="0lw-nO-m9s" secondAttribute="bottom" id="yGJ-Zr-Pyi"/>
+                                    <constraint firstAttribute="trailing" secondItem="SAT-Yf-a68" secondAttribute="trailing" id="Nm3-kM-2PG"/>
+                                    <constraint firstAttribute="bottom" secondItem="SAT-Yf-a68" secondAttribute="bottom" id="avF-F0-i0Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="0lw-nO-m9s" secondAttribute="trailing" id="cg4-GI-3po"/>
+                                    <constraint firstItem="SAT-Yf-a68" firstAttribute="leading" secondItem="0gh-a6-Qzi" secondAttribute="leading" id="xNT-X9-eTs"/>
+                                    <constraint firstItem="SAT-Yf-a68" firstAttribute="top" secondItem="0lw-nO-m9s" secondAttribute="bottom" id="zQk-EC-R5G"/>
                                 </constraints>
                             </customView>
                             <customView id="dVQ-cQ-YLT">
                                 <rect key="frame" x="355" y="0.0" width="696" height="779"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
-                                    <webView translatesAutoresizingMaskIntoConstraints="NO" id="7Uf-9d-Z8z">
-                                        <rect key="frame" x="0.0" y="0.0" width="696" height="779"/>
+                                    <webView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Uf-9d-Z8z">
+                                        <rect key="frame" x="0.0" y="28" width="696" height="779"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <webPreferences key="preferences" identifier="tabletView" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0"/>
                                     </webView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="43a-1t-bxk">
-                                        <rect key="frame" x="576" y="20" width="100" height="21"/>
+                                        <rect key="frame" x="0.0" y="5" width="692" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="border" alignment="center" drawsBackground="YES" id="86H-xG-EmV">
-                                            <font key="font" metaFont="system"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" drawsBackground="YES" id="86H-xG-EmV">
+                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" red="0.73581861413043481" green="0.73581861413043481" blue="0.73581861413043481" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="7Uf-9d-Z8z" secondAttribute="trailing" id="L9A-bh-7jE"/>
-                                    <constraint firstAttribute="bottom" secondItem="7Uf-9d-Z8z" secondAttribute="bottom" id="MS6-Ov-45e"/>
-                                    <constraint firstAttribute="trailing" secondItem="43a-1t-bxk" secondAttribute="trailing" constant="20" id="Wta-GM-WPL"/>
-                                    <constraint firstItem="7Uf-9d-Z8z" firstAttribute="top" secondItem="dVQ-cQ-YLT" secondAttribute="top" id="eH6-3b-eWN"/>
-                                    <constraint firstAttribute="bottom" secondItem="43a-1t-bxk" secondAttribute="bottom" constant="10" id="spK-Ys-mjg"/>
-                                    <constraint firstItem="7Uf-9d-Z8z" firstAttribute="leading" secondItem="dVQ-cQ-YLT" secondAttribute="leading" id="wG9-iG-Zme"/>
+                                    <constraint firstItem="43a-1t-bxk" firstAttribute="leading" secondItem="dVQ-cQ-YLT" secondAttribute="leading" id="3z7-4y-d5E"/>
+                                    <constraint firstAttribute="bottom" secondItem="43a-1t-bxk" secondAttribute="bottom" id="AhW-D3-Umy"/>
+                                    <constraint firstAttribute="trailing" secondItem="43a-1t-bxk" secondAttribute="trailing" id="JGR-5N-Tab"/>
+                                    <constraint firstItem="7Uf-9d-Z8z" firstAttribute="top" secondItem="dVQ-cQ-YLT" secondAttribute="top" id="X13-Au-yul"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Uf-9d-Z8z" secondAttribute="trailing" id="yki-sE-PCI"/>
+                                    <constraint firstItem="43a-1t-bxk" firstAttribute="top" secondItem="7Uf-9d-Z8z" secondAttribute="bottom" id="zp8-xE-nhz"/>
                                 </constraints>
                             </customView>
                         </subviews>
@@ -774,9 +773,9 @@
                     <toolbarItem implicitItemIdentifier="5125EE4F-4D89-4EEF-AE89-003451477A30" label="Back button" paletteLabel="Back button" id="N1k-pA-yqQ">
                         <nil key="toolTip"/>
                         <size key="minSize" width="30" height="28"/>
-                        <size key="maxSize" width="50" height="48"/>
+                        <size key="maxSize" width="62" height="48"/>
                         <button key="view" verticalHuggingPriority="750" id="rpZ-VC-MXd">
-                            <rect key="frame" x="11" y="14" width="50" height="28"/>
+                            <rect key="frame" x="5" y="14" width="61" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" title="←" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YVH-vO-eoO">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -790,9 +789,9 @@
                     <toolbarItem implicitItemIdentifier="DB683B98-222F-407A-8D29-CBD2CF56C4B3" label="Forward button" paletteLabel="Forward button" id="IOr-xO-jnV">
                         <nil key="toolTip"/>
                         <size key="minSize" width="30" height="28"/>
-                        <size key="maxSize" width="50" height="48"/>
+                        <size key="maxSize" width="61" height="48"/>
                         <button key="view" verticalHuggingPriority="750" id="jd2-eL-vSC">
-                            <rect key="frame" x="20" y="14" width="50" height="28"/>
+                            <rect key="frame" x="15" y="14" width="61" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" title="→" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uyQ-3Z-Imf">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -806,9 +805,9 @@
                     <toolbarItem implicitItemIdentifier="1EF30407-1161-434C-B9AA-C94D273F29CF" label="Reload button" paletteLabel="Reload button" id="2Hq-qE-7eN">
                         <nil key="toolTip"/>
                         <size key="minSize" width="40" height="28"/>
-                        <size key="maxSize" width="50" height="48"/>
+                        <size key="maxSize" width="61" height="48"/>
                         <button key="view" verticalHuggingPriority="750" id="TkM-Jg-AE5">
-                            <rect key="frame" x="17" y="14" width="50" height="28"/>
+                            <rect key="frame" x="11" y="14" width="61" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" title="Reload" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dbC-NA-AGr">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>

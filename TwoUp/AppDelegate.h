@@ -9,11 +9,14 @@
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate>
 
 @property (assign) IBOutlet WebView *mobileView;
 @property (assign) IBOutlet WebView *tabletView;
 @property (assign) IBOutlet NSTextField *addressUrl;
+
+@property (assign) IBOutlet NSTextField *mobileDimensions;
+@property (assign) IBOutlet NSTextField *tabletDimensions;
 
 @property (assign) IBOutlet NSWindow *window;
 

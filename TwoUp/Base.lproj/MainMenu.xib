@@ -651,7 +651,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="1051" height="779"/>
+            <rect key="contentRect" x="335" y="372" width="1051" height="779"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="1051" height="779"/>
@@ -666,12 +666,12 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <webView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0lw-nO-m9s">
-                                        <rect key="frame" x="0.0" y="28" width="354" height="751"/>
+                                        <rect key="frame" x="0.0" y="28" width="100" height="751"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <webPreferences key="preferences" identifier="mobileView" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0"/>
                                     </webView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SAT-Yf-a68">
-                                        <rect key="frame" x="0.0" y="5" width="351" height="21"/>
+                                        <rect key="frame" x="263" y="5" width="88" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" drawsBackground="YES" id="rZH-it-I2s">
                                             <font key="font" metaFont="smallSystem"/>
@@ -683,8 +683,9 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="SAT-Yf-a68" secondAttribute="trailing" id="Nm3-kM-2PG"/>
                                     <constraint firstAttribute="bottom" secondItem="SAT-Yf-a68" secondAttribute="bottom" id="avF-F0-i0Y"/>
-                                    <constraint firstAttribute="trailing" secondItem="0lw-nO-m9s" secondAttribute="trailing" id="cg4-GI-3po"/>
+                                    <constraint firstAttribute="trailing" secondItem="0lw-nO-m9s" secondAttribute="trailing" id="usg-Mg-8Ib"/>
                                     <constraint firstItem="SAT-Yf-a68" firstAttribute="leading" secondItem="0gh-a6-Qzi" secondAttribute="leading" id="xNT-X9-eTs"/>
+                                    <constraint firstItem="0lw-nO-m9s" firstAttribute="top" secondItem="0gh-a6-Qzi" secondAttribute="top" id="y7V-tW-hWu"/>
                                     <constraint firstItem="SAT-Yf-a68" firstAttribute="top" secondItem="0lw-nO-m9s" secondAttribute="bottom" id="zQk-EC-R5G"/>
                                 </constraints>
                             </customView>
@@ -693,12 +694,12 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <webView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Uf-9d-Z8z">
-                                        <rect key="frame" x="0.0" y="28" width="696" height="779"/>
+                                        <rect key="frame" x="0.0" y="28" width="100" height="779"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <webPreferences key="preferences" identifier="tabletView" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0"/>
                                     </webView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="43a-1t-bxk">
-                                        <rect key="frame" x="0.0" y="5" width="692" height="21"/>
+                                        <rect key="frame" x="592" y="5" width="100" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" drawsBackground="YES" id="86H-xG-EmV">
                                             <font key="font" metaFont="smallSystem"/>
@@ -710,8 +711,8 @@
                                 <constraints>
                                     <constraint firstItem="43a-1t-bxk" firstAttribute="leading" secondItem="dVQ-cQ-YLT" secondAttribute="leading" id="3z7-4y-d5E"/>
                                     <constraint firstAttribute="bottom" secondItem="43a-1t-bxk" secondAttribute="bottom" id="AhW-D3-Umy"/>
+                                    <constraint firstItem="7Uf-9d-Z8z" firstAttribute="top" secondItem="dVQ-cQ-YLT" secondAttribute="top" id="Giq-lw-36f"/>
                                     <constraint firstAttribute="trailing" secondItem="43a-1t-bxk" secondAttribute="trailing" id="JGR-5N-Tab"/>
-                                    <constraint firstItem="7Uf-9d-Z8z" firstAttribute="top" secondItem="dVQ-cQ-YLT" secondAttribute="top" id="X13-Au-yul"/>
                                     <constraint firstAttribute="trailing" secondItem="7Uf-9d-Z8z" secondAttribute="trailing" id="yki-sE-PCI"/>
                                     <constraint firstItem="43a-1t-bxk" firstAttribute="top" secondItem="7Uf-9d-Z8z" secondAttribute="bottom" id="zp8-xE-nhz"/>
                                 </constraints>

@@ -10,8 +10,7 @@
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     NSString *urlAddress = @"http://www.theguardian.com/preference/platform/mobile?page=http%3A%2F%2Fwww.theguardian.com%3Fview%3Dmobile";
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
@@ -24,7 +23,7 @@
     [self.mobileView setFrameLoadDelegate:self];
     [self.tabletView setFrameLoadDelegate:self];
     
-    [_addressUrl setStringValue:@"http://www.theguardian.com/preference/platform/mobile?page=http%3A%2F%2Fwww.theguardian.com%3Fview%3Dmobile"];
+    [_addressUrl setStringValue:urlAddress];
     
     [self updateDimensionFields];
     
@@ -32,15 +31,12 @@
                                           name:NSViewFrameDidChangeNotification object:_mobileView];
 }
 
-- (void)viewResized:(NSNotification *)notification
-{
+- (void)viewResized:(NSNotification *)notification {
     [self updateDimensionFields];
 }
 
 - (void)webView:(WebView *)webView decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(WebFrame *)frame decisionListener:(id )listener{
-    NSLog(@"Change");
-    if (WebNavigationTypeLinkClicked == [[actionInformation objectForKey:WebActionNavigationTypeKey] intValue])
-    {
+    if (WebNavigationTypeLinkClicked == [[actionInformation objectForKey:WebActionNavigationTypeKey] intValue]) {
         NSString *requestPath = [[request URL] absoluteString];
         
         [[self.mobileView mainFrame] loadRequest:request];

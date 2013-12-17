@@ -110,10 +110,4 @@
     [_mobileDimensions setStringValue:mobileDimensionString];
 }
 
-- (void)mouseDragged:(NSEvent *)event
-{
-    NSLog(@"DRAGGED");
-    [self updateDimensionFields];
-}
-
 @end

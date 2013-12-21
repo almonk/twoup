@@ -28,7 +28,10 @@
     [self updateDimensionFields];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewResized:)
-                                          name:NSViewFrameDidChangeNotification object:_mobileView];
+          name:NSViewFrameDidChangeNotification object:_mobileView];
+    
+    [_window setFrame:NSMakeRect(0.f, 0.f, 200.f, 200.f) display:YES animate:YES];
+
 }
 
 - (void)viewResized:(NSNotification *)notification {
@@ -46,6 +49,8 @@
     }
     [listener use]; // Say for webview to do it work...
 }
+
+#pragma mark - Navigation
 
 -(IBAction)sendTextToUrl:(id)sender {
     NSURL *url = [NSURL URLWithString:[self buildUrlFromAddressBar]];
@@ -70,6 +75,8 @@
     [self.mobileView reload:nil];
     [self.tabletView reload:nil];
 }
+
+#pragma mark - Helpers
 
 -(NSString*)buildUrlFromAddressBar {
     NSString *urlAddress = [_addressUrl stringValue];

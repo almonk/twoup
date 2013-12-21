@@ -14,6 +14,7 @@
 @property (assign) IBOutlet WebView *mobileView;
 @property (assign) IBOutlet WebView *tabletView;
 @property (assign) IBOutlet NSTextField *addressUrl;
+@property (assign) IBOutlet NSView *mobileContainer;
 
 @property (assign) IBOutlet NSTextField *mobileDimensions;
 @property (assign) IBOutlet NSTextField *tabletDimensions;

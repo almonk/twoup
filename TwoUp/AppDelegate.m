@@ -30,7 +30,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewResized:)
           name:NSViewFrameDidChangeNotification object:_mobileView];
     
-    [_window setFrame:NSMakeRect(0.f, 0.f, 200.f, 200.f) display:YES animate:YES];
+    [_window setFrame:[[NSScreen mainScreen] visibleFrame] display:YES];
 
 }
 
